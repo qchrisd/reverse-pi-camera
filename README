@@ -1,0 +1,5 @@
+This is the README file for the Reverse Pi Camera backup camera replacement with depth sensing.
+
+This project is currently in production.
+
+The camera runs off a Raspberry Pi utilizing the rPi Camera V2 from Adafruit. The software is built on pygame to grab images off the camera and send them to the frame buffer.
