@@ -9,7 +9,9 @@ window = pygame.display.set_mode((640,480))
 
 # Initialize the camera and start it for image capturing
 pygame.camera.init()
-cam = pygame.camera.Camera('/dev/video0', (640, 480))
+cameras = pygame.camera.list_cameras()
+print(cameras)
+cam = pygame.camera.Camera(cameras[0], (640, 480))
 cam.start()
 
 # Create the pygame surface (unsure what this does)
