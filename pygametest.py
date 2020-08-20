@@ -22,9 +22,10 @@ while True:
         if event.type == pygame.QUIT:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            print(f"The key {event.key} was pressed. {event.unicode}")
-        elif event.type == pygame.KEYUP:
-            print(f"The key {event.key} was released. {event.mod}")
+            if event.key == pygame.K_ESCAPE:
+                sys.exit()
+            elif event.key == pygame.K_f:
+                pygame.display.toggle_fullscreen()
             
     # Gets an image and puts it on the previously created surface
     cam.get_image(frame)
